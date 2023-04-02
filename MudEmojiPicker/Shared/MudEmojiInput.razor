@@ -1,9 +1,6 @@
-﻿
-
+﻿@using System.Data
+@namespace MudEmojiPicker.Shared
 @using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
-@using global::MudEmojiPicker.Data
-
-
 @inject EmojiService _emojiService
 
 <input name="Emoji" @bind="@Value" hidden/>
@@ -46,10 +43,9 @@
 
 @code {
     
-    string rteObj;
 
     private DialogOptions _dialogOptions = new() { FullScreen = false };
-    private RenderFragment childContent { get; set; }
+    
     
     private float _iconCardHeight = 36; // single icon card height includin margins
     
@@ -60,9 +56,7 @@
 
     [Parameter]
     public EventCallback<string> ValueChanged { get; set; }
-
     
-     
     
     protected override void OnInitialized()
     {
@@ -77,25 +71,14 @@
         dialogVisible = false;
        // StateHasChanged();
     }
-
-    int currentIndex { get; set; } = -1;
-    int currentTabIndex { get; set; }
+    
     string activeClass = "e-active";
     private bool dialogVisible { get; set; }
-    private bool disableInsertBtn { get; set; } = true;
+
     
-
-    private void OnIconIconClick(int index, int tabIndex)
-    {
-        disableInsertBtn = false;
-        currentIndex = index;
-        currentTabIndex = tabIndex;
-    }
-
     private async Task ClickHandler()
     {
         dialogVisible = true;
-    /* await this.rteObj.SaveSelectionAsync(); */
     }
 
 }

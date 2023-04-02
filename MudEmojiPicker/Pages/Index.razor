@@ -1,11 +1,16 @@
 ﻿@page "/"
-@using MudEmojiPicker.Data
-@inject EmojiService EmojiService;
 
+@inject EmojiService EmojiService;
+@using MudEmojiPicker.Shared
 
 
 <MudIcon Icon="@EmojiService.GetSvgValue("🤣")"></MudIcon>
 <MudIcon Icon="@Twemoji.E1f0cf"></MudIcon>
+<MudEmojiInput @bind-Value="@EmojiValue"/>
 
+@code
+{
+    public string EmojiValue { get; set; } = "🤣";
 
+}
 

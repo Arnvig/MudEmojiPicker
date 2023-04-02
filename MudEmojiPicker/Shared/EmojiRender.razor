@@ -1,6 +1,9 @@
 ﻿
+
+@inject EmojiService _emojiService
+@namespace MudEmojiPicker.Shared
 @using ChangeEventArgs = Microsoft.AspNetCore.Components.ChangeEventArgs
-@using global::MudEmojiPicker.Data
+
 
 <input name="Emoji" @bind="@Value" hidden @oninput="OnValueChanged"/>
 

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using MudBlazor;
+using MudBlazor.Services;
 using MudEmojiPicker.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<EmojiService>();
-
-
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 
