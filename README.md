@@ -4,8 +4,9 @@ For some reason do it not work.
 
 It use Mudblazor, Twemoji.
 
-It is implamentet on a bigger project and working
+The code is mainly copy from a bigger project
 https://github.com/Faellesskabet/kuliv.dk
+
 
 Remember to add 
 `builder.Services.AddSingleton<EmojiService>();`
