@@ -1,6 +1,6 @@
 # MudEmojiPicker
 
-For some reason MudDisplay do not work, the rest works...
+For some reason MudDialog do not work, the rest works...
 
 It use Mudblazor, Twemoji.
 
